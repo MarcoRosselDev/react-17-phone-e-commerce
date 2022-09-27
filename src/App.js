@@ -6,10 +6,15 @@ import "bootstrap/dist/css/bootstrap.min.css";
 class App extends Component {
   render() {
     return (
-      <div className="app">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-        </header>
+      <div className="container">
+        <div className="row">
+          <div className="col-6">clumn number one</div>
+          <div className="col-6">
+            <span>
+              <i className="fas fa-home" />
+            </span>
+          </div>
+        </div>
       </div>
     );
   }
