@@ -3,8 +3,10 @@
   --lightBlue: #009ffd;
   --mainWhite: #f3f3f3;
   --mainDark: #232528;
+  --mainDark: #000;
   --mainYellow: #ffa400;
 }
+
 body {
   font-family: "Oswald", sans-serif !important;
   background: var(--mainWhite) !important;
@@ -18,6 +20,26 @@ body {
 .text-blue {
   color: var(--mainBlue);
 }
-.texr-bright {
+.text-bright {
   color: var(--lightBlue);
+}
+.navbar {
+  justify-content: flex-start !important;
+}
+.btn-black {
+  background: transparent;
+  text-transform: capitalize;
+  font-size: 0.8rem !important;
+  color: var(--mainBlack);
+  border-radius: 0 !important;
+  border: 0.1rem solid var(--mainDark) !important;
+}
+.btn-black:hover {
+  background: var(--mainDark) !important;
+  color: var(--mainWhite) !important;
+}
+.cart-icon {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--mainYellow);
 }
