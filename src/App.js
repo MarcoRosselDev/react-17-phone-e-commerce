@@ -13,7 +13,6 @@ class App extends Component {
     return (
       <React.Fragment>
         <Navbar />
-        <h3>hola from</h3>
         <Routes>
           <Route path="/" element={<ProductList />} />
           <Route path="/details" element={<Details />} />
