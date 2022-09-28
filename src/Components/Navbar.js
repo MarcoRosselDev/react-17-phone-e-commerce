@@ -19,6 +19,11 @@ Creative Commons (Attribution 3.0 Unported);
             </Link>
           </li>
         </ul>
+        <Link to="/cart" className="ml-auto">
+          <button>
+            <i className="fas fa-cart-plus">my cart</i>
+          </button>
+        </Link>
       </nav>
     );
   }
