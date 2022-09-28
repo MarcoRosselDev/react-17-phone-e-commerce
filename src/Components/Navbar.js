@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import logo from "../logo.svg";
-import styled from "styled-components";
+//import styled from "styled-components";
+import { ButtonContainer } from "./Button";
 
 export default class Navbar extends Component {
   render() {
@@ -32,7 +33,3 @@ Creative Commons (Attribution 3.0 Unported);
     );
   }
 }
-
-const ButtonContainer = styled.button`
-  text-transform: capitalize;
-`;
