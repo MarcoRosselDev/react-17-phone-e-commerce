@@ -3,13 +3,13 @@ import Product from "./Product";
 import Title from "./Title";
 import { storeProducts } from "../data";
 import { ProductConsumer } from "../context";
+import { getValue } from "@testing-library/user-event/dist/utils";
 
 export default class ProductList extends Component {
   state = {
     products: storeProducts,
   };
   render() {
-    console.log(this.state.products);
     return (
       <React.Fragment>
         <div className="py-5">
@@ -17,8 +17,10 @@ export default class ProductList extends Component {
             <Title name="our" title="product" />
             <div className="row">
               <ProductConsumer>
-                {(a) => {
-                  return <h1>{a}</h1>;
+                {(value) => {
+                  return value.products.map((product) => {
+                    return <Product key={product.id} product={product} />;
+                  });
                 }}
               </ProductConsumer>
             </div>

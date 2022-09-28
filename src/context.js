@@ -21,6 +21,8 @@ export default class ProductProvider extends Component {
       <ProductContext.Provider
         value={{
           ...this.state,
+          handleDetail: this.handleDetail,
+          addToCart: this.addToCart,
         }}
       >
         {this.props.children}
