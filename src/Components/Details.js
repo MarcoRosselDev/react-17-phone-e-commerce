@@ -1,15 +1,17 @@
 import React, { Component } from "react";
+import { ProductConsumer } from "../context";
+import { Link } from "react-router-dom";
+import { ButtonContainer } from "./Button";
 
 export default class Details extends Component {
   render() {
     return (
-      <>
-        hola from details
-        <h3>hola from details</h3>
-        <h3>hola from details</h3>
-        <h3>hola from details</h3>
-        console.log('hola adsfasd');
-      </>
+      <ProductConsumer>
+        {(value) => {
+          const { id, company, img, info, price, title, inCart } =
+            value.detailProduct;
+        }}
+      </ProductConsumer>
     );
   }
 }
