@@ -5,9 +5,27 @@ const ProductContext = React.createContext();
 //consumer
 
 export default class ProductProvider extends Component {
+  state = {
+    products: storeProducts,
+    detailProduct: detailProduct,
+  };
+
+  handleDetail = () => {
+    console.log("hola desde handle detail");
+  };
+  addToCart = () => {
+    console.log("hola desde add to cart");
+  };
+
   render() {
     return (
-      <ProductContext.Provider value="holas">
+      <ProductContext.Provider
+        value={{
+          ...this.state,
+          handleDetail: this.handleDetail,
+          addToCart: this.addToCart,
+        }}
+      >
         {this.props.children}
       </ProductContext.Provider>
     );
