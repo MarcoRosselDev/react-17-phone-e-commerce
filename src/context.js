@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { storeProducts, detailProduct } from "./data";
 const ProductContext = React.createContext();
 //provider
 //consumer
@@ -7,7 +7,7 @@ const ProductContext = React.createContext();
 export default class ProductProvider extends Component {
   render() {
     return (
-      <ProductContext.Provider value="hola desde context <3">
+      <ProductContext.Provider value="holas">
         {this.props.children}
       </ProductContext.Provider>
     );
