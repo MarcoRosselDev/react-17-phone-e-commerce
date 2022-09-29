@@ -56,6 +56,7 @@ Product.propTypes = {
     inCart: PropTypes.bool,
   }),
 };
+//--------------------------------------------------
 
 const ProductWrapper = styled.div`
   .card {
