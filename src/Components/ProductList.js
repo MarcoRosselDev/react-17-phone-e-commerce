@@ -4,11 +4,14 @@ import Title from "./Title";
 import { storeProducts } from "../data";
 import styled from "styled-components";
 import { ProductConsumer } from "../context";
+
+parent of  (some mistake)
 export default class ProductList extends Component {
   state = {
     products: storeProducts,
   };
   render() {
+    console.log(this.state.products);
     return (
       <React.Fragment>
         <ProductWrapper className="py-5">
@@ -16,10 +19,8 @@ export default class ProductList extends Component {
             <Title name="our" title="products" />
             <div className="row">
               <ProductConsumer>
-                {(value) => {
-                  return value.products.map((product) => {
-                    return <Product key={product.id} product={product} />;
-                  });
+                {(a) => {
+                  return <h1>{a}</h1>;
                 }}
               </ProductConsumer>
             </div>
