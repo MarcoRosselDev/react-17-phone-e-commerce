@@ -64,5 +64,15 @@ const ProductWrapper = styled.div`
     .card-footer {
       background: rgba(247, 247, 247);
     }
+    .img-container {
+      position: relative;
+      overflow: hidden;
+    }
+    .card-img-top {
+      transition: all 1s linear;
+    }
+    .img-container:hover .card-img-top {
+      transform: scale(1.2);
+    }
   }
 `;
