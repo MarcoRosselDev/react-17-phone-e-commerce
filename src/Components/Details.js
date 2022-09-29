@@ -7,6 +7,7 @@ export default class Details extends Component {
         hola from details
         <h3>hola from details</h3>
         <h3>hola from details</h3>
+        <h3>hola from details</h3>
         console.log('hola adsfasd');
       </>
     );
