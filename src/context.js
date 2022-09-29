@@ -166,6 +166,7 @@ class ProductProvider extends Component {
   render() {
     return (
 <<<<<<< HEAD
+<<<<<<< HEAD
       <ProductContext.Provider value="hola desde context">
 =======
       <ProductContext.Provider
@@ -182,6 +183,9 @@ class ProductProvider extends Component {
         }}
       >
 >>>>>>> e01b0d42a425722b5c92127044149c5cd591e27d
+=======
+      <ProductContext.Provider value="hola desde context ">
+>>>>>>> master
         {this.props.children}
       </ProductContext.Provider>
     );
