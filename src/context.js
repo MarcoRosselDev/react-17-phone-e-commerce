@@ -28,8 +28,11 @@ export default class ProductProvider extends Component {
     return product;
   };
 
-  handleDetail = () => {
-    console.log("hola desde handle detail");
+  handleDetail = (id) => {
+    const product = this.getItem(id);
+    this.setState(() => {
+      return { detailProduct: product };
+    });
   };
   addToCart = () => {
     console.log("hola desde add to cart");
