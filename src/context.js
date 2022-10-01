@@ -11,6 +11,9 @@ export default class ProductProvider extends Component {
     cart: [],
     modalOpen: false,
     modalProduct: detailProduct,
+    cartSubTotal: 0,
+    cartTax: 0,
+    cartTotal: 0,
   };
   componentDidMount() {
     this.setProducts();
@@ -65,7 +68,9 @@ export default class ProductProvider extends Component {
       return { modalOpen: false };
     });
   };
-
+  increment = (id) => {
+    console.log("this is increment method");
+  };
   render() {
     return (
       <ProductContext.Provider
