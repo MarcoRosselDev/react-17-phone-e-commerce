@@ -71,6 +71,16 @@ export default class ProductProvider extends Component {
   increment = (id) => {
     console.log("this is increment method");
   };
+  decrement = (id) => {
+    console.log("this is decrement method");
+  };
+  removeItem = (id) => {
+    console.log("item removed");
+  };
+  clearCart = () => {
+    console.log("cart was cleared");
+  };
+
   render() {
     return (
       <ProductContext.Provider
