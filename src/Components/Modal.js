@@ -14,15 +14,17 @@ export default class Modal extends Component {
           if (!modalOpen) {
             return null;
           } else {
-            <ModalContainer>
-              <div className="container">
-                <div className="row">
-                  <div className="col-8 mx-auto col-md-6 col-lg-4 text-center text-capitalize">
-                    <h5>item added to the cart</h5>
+            return (
+              <ModalContainer>
+                <div className="container">
+                  <div className="row">
+                    <div className="col-8 mx-auto col-md-6 col-lg-4 text-center text-capitalize">
+                      <h5>item added to the cart</h5>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </ModalContainer>;
+              </ModalContainer>
+            );
           }
         }}
       </ProductConsumer>
