@@ -9,6 +9,8 @@ export default class ProductProvider extends Component {
     products: [],
     detailProduct: detailProduct,
     cart: [],
+    modalOpen: true,
+    modalProduct: detailProduct,
   };
   componentDidMount() {
     this.setProducts();
@@ -49,6 +51,13 @@ export default class ProductProvider extends Component {
       },
       () => console.log(this.state)
     );
+  };
+
+  openModal = (id) => {
+    const product = this.getItem(id);
+    this.setState(() => {
+      return { modalProduct };
+    });
   };
 
   render() {
