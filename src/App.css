@@ -43,3 +43,8 @@ body {
   font-size: 1.2rem;
   color: var(--mainYellow);
 }
+.btn-black {
+  background: transparent;
+  text-transform: capitalize;
+  font-size: 0.8rem !important;
+}
