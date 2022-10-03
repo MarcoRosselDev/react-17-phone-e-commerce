@@ -71,7 +71,13 @@ export default class ProductProvider extends Component {
     });
   };
   increment = (id) => {
-    console.log("this is increment method");
+    let tempCart = [...this.state.cart];
+    const selectedProduct = tempCart.find((item) => item.id === id);
+    const index = tempCart.indexOf(selectedProduct);
+    const product = tempCart[index];
+
+    product.count = product.count + 1;
+    product.total = product.count * product.price;
   };
   decrement = (id) => {
     console.log("this is decrement method");
@@ -83,7 +89,7 @@ export default class ProductProvider extends Component {
     tempCart = tempCart.filter((item) => item.id !== id);
     const index = tempProducts.indexOf(this.getItem(id));
     let removedProduct = tempProducts[index];
-    removedProduct.inCart = flase;
+    removedProduct.inCart = false;
     removedProduct.count = 0;
     removedProduct.total = 0;
 
