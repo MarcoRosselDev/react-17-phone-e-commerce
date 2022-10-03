@@ -80,7 +80,9 @@ export default class ProductProvider extends Component {
     console.log("item removed");
   };
   clearCart = () => {
-    console.log("cart was cleared");
+    this.setState(() => {
+      return { cart: [] };
+    });
   };
   addTotals = () => {
     let subTotal = 0;
