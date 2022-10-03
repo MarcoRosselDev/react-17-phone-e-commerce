@@ -77,7 +77,15 @@ export default class ProductProvider extends Component {
     console.log("this is decrement method");
   };
   removeItem = (id) => {
-    console.log("item removed");
+    let tempProducts = [...this.state.products];
+    let tempCart = [...this.state.cart];
+
+    tempCart = tempCart.filter((item) => item.id !== id);
+    const index = tempProducts.indexOf(this.getItem(id));
+    let removedProduct = tempProducts[index];
+    removedProduct.inCart = flase;
+    removedProduct.count = 0;
+    removedProduct.total = 0;
   };
   clearCart = () => {
     this.setState(
