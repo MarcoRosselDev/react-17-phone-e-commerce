@@ -52,7 +52,9 @@ export default class ProductProvider extends Component {
       () => {
         return { product: tempProducts, cart: [...this.state.cart, product] };
       },
-      () => console.log(this.state)
+      () => {
+        this.addTotals();
+      }
     );
   };
 
